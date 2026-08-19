@@ -35,7 +35,7 @@ export async function requestPrediction(
 
   let response: Response;
   try {
-    response = await fetch(PREDICT_ENDPOINT, { method: "POST", body, signal });
+    response = await fetch(PREDICT_ENDPOINT, { method: "POST", body, signal: signal ?? null });
   } catch {
     throw new PredictionError(
       "Could not reach the AI model server. Please check your connection and try again.",
