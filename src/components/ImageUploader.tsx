@@ -6,8 +6,8 @@ import { ACCEPTED_EXTENSIONS, MAX_IMAGE_BYTES } from "@/lib/config";
 
 interface Props {
   previewUrl: string | null;
-  fileName?: string;
-  disabled?: boolean;
+  fileName?: string | undefined;
+  disabled?: boolean | undefined;
   onSelect: (file: File) => void;
   onClear: () => void;
 }
